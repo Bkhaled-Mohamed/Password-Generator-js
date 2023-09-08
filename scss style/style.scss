@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+$font: "Roboto", sans-serif;
+$BackColor: #131218;
+$sColor: #18171f;
+$WindowColor: #24232b;
+$btn-color: #a4ffaf;
+$fontColor: #b1b0b8;
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $font;
+}
+
+body {
+  background-color: $BackColor;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100vh;
+
+  .title {
+    color: $fontColor;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .passScreen {
+    width: 100%;
+    background-color: $sColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    position: relative;
+
+    p {
+      color: grey;
+      font-size: 1.5rem;
+    }
+
+    .copyFeed {
+      font-size: 0.7rem;
+      position: absolute;
+      right: 55px;
+      color: rgb(152, 214, 152);
+    }
+
+    svg {
+      fill: $btn-color;
+      width: 2rem;
+      cursor: pointer;
+
+      &:hover {
+        width: 2.1rem;
+      }
+    }
+  }
+
+  .parameter {
+    width: 100%;
+    background-color: $sColor;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    .length {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10px;
+
+      p {
+        color: $fontColor;
+      }
+
+      #lengthText {
+        color: $btn-color;
+        font-size: 1.2rem;
+      }
+    }
+    .slider {
+      -webkit-appearance: none;
+      outline: none;
+      padding: 10px;
+      margin-bottom: 10px;
+
+      background-color: $sColor;
+
+      &::-webkit-slider-runnable-track {
+        background: rgb(244, 220, 216);
+        height: 5px;
+      }
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 20px;
+        width: 20px;
+        background: $btn-color;
+        margin-top: -8px;
+        border-radius: 50%;
+      }
+
+      &::-moz-range-thumb {
+        height: 15px;
+        width: 15px;
+        background: rgb(170, 46, 67);
+        margin-top: -5px;
+        border-radius: 50%;
+      }
+    }
+
+    .checkBoxes {
+      input[type="checkbox"] + label {
+        color: $fontColor;
+
+        display: block;
+        margin: 10px 10px;
+        cursor: pointer;
+        padding: 0.2em;
+      }
+
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      input[type="checkbox"] + label:before {
+        content: "\2714";
+        border: 0.1em solid #cecece;
+        border-radius: 0.2em;
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        padding-left: 0.2em;
+        padding-bottom: 0.3em;
+        margin-right: 1em;
+        vertical-align: bottom;
+        color: transparent;
+        transition: 0.2s;
+      }
+
+      input[type="checkbox"] + label:active:before {
+        transform: scale(0);
+      }
+
+      input[type="checkbox"]:checked + label:before {
+        background-color: MediumSeaGreen;
+        border-color: MediumSeaGreen;
+        color: #fff;
+      }
+    }
+
+    .str {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: center;
+      background-color: $WindowColor;
+      border: 1px solid $WindowColor;
+      padding: 10px;
+      margin: 20px 0;
+
+      .squers {
+        display: flex;
+        flex-direction: row;
+      }
+      p {
+        align-self: center;
+        color: $fontColor;
+      }
+
+      .square {
+        width: 10px;
+        height: 30px;
+        margin: 5px;
+        border: 2px solid $btn-color;
+      }
+
+      .filled {
+        background-color: #81f58e;
+      }
+    }
+
+    .generate {
+      padding: 15px;
+      background-color: $btn-color;
+      cursor: pointer;
+
+      border: none;
+
+      &:hover {
+        background-color: #81f58e;
+      }
+    }
+  }
+}

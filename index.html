@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+
+    <link rel="stylesheet" href="./scss style/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p class="title">Password Generator</p>
+      <div class="passScreen">
+        <p class="pass">P4$5wza5</p>
+        <p class="copyFeed hidden">copied!</p>
+        <svg
+          class="copyPass"
+          xmlns="http://www.w3.org/2000/svg"
+          height="48"
+          viewBox="0 -960 960 960"
+          width="48"
+        >
+          <path
+            d="M180-81q-24 0-42-18t-18-42v-603h60v603h474v60H180Zm120-120q-24 0-42-18t-18-42v-560q0-24 18-42t42-18h440q24 0 42 18t18 42v560q0 24-18 42t-42 18H300Zm0-60h440v-560H300v560Zm0 0v-560 560Z"
+          />
+        </svg>
+      </div>
+
+      <div class="parameter">
+        <div class="length">
+          <p>Password Length</p>
+          <p id="lengthText">8</p>
+        </div>
+        <input
+          type="range"
+          min="6"
+          max="20"
+          value="8"
+          class="slider"
+          id="myRange"
+        />
+
+        <form class="checkBoxes">
+          <input
+            type="checkbox"
+            id="Uppercase"
+            name="Uppercase"
+            value="Uppercase"
+            checked
+          />
+          <label for="Uppercase">Inlcude Uppercase Letters</label>
+          <input
+            type="checkbox"
+            id="Lowercase"
+            name="Lowercase"
+            value="Lowercase"
+            checked
+          />
+          <label for="Lowercase">Inlcude Lowercase Letters</label>
+          <input
+            type="checkbox"
+            id="Nummbers"
+            name="Nummbers"
+            value="Nummbers"
+          />
+          <label for="Nummbers">Inlcude Numbers</label>
+          <input
+            type="checkbox"
+            id="Symbols"
+            class="Symbols"
+            name="Symbols"
+            value="Symbols"
+          />
+          <label for="Symbols">Inlcude Symbols</label>
+        </form>
+
+        <div class="str">
+          <p>STRENGTH</p>
+
+          <div class="squers">
+            <div class="sq1 filled square"></div>
+            <div class="sq2 filled square"></div>
+            <div class="sq3 square"></div>
+            <div class="sq4 square"></div>
+          </div>
+        </div>
+
+        <button class="generate">GENERATE</button>
+      </div>
+    </div>
+
+    <script src="scripty.js"></script>
+  </body>
+</html>
